@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Acaí D' Campos: Faça seu pedido!</title>
+    <!--- Define o ícone do site (favicon)-->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/responsivo.css" />
+
+</head>
+
+<body class="no-select">
+
+    <div class="container-mensagens" id="container-mensagens">
+
+    </div>
+
+
+
+    <section class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg pl-0 pr-0 col-one">
+                <a class="navbar-brand wow zoomIn" href="#">
+                    <img src="./img/logo.png" width="150" class="img-logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+                    <span class="navbar-toggler-icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto mr-auto wow zoomIn">
+
+                        <li class="nav-item"><a href="#cardapio" class="nav-link"><b>Cardápio</b></a></li>
+                        <li class="nav-item"><a href="#sobre" class="nav-link"><b>Sobre Nós</b></a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-one">
+                    <div class="d-flex text-banner">
+                        <h1 class="wow fadeInLeft">
+                            <b>Escolha sua <b class="color-primary">Comida</b>, <b class="color-primary">preferida</b> da forma que preferir.</b>
+                        </h1>
+                        <p class="wow fadeInLeft delay-02s">
+                            Aproveite nosso cardápio! Escolha o que desejar.
+                        </p>
+                        <div class="wow fadeIn delay-05s">
+                            <a class="btn btn-sm btn-white btn-social mt-4 mr-3"
+                                href="https://www.instagram.com/acaidcampos" target="_blank">
+                                <i class="fab fa-instagram social-icon"
+                                    data-tooltip="Veja nosso instagram @acaidcampos"></i>
+                            </a>
+                            <a class="btn btn-sm btn-white btn-social mt-4 mr-3"
+                                href="https://www.google.com/maps/place/A%C3%A7a%C3%AD+D+Campos/@-19.8086065,-44.0033492,17z/data=!3m1!4b1!4m6!3m5!1s0xa68f72ac4f4109:0xe58e86716faa49e2!8m2!3d-19.8086116!4d-44.0007743!16s%2Fg%2F11t2fh7nst?entry=ttu"
+                                target="_blank">
+                                <i class="fas fab fa-map-marked-alt social-icon" data-tooltip="Onde Estamos "></i>
+                            </a>
+                            <a class="btn btn-sm btn-white btn-social mt-4 botao-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp social-icon"
+                                    data-tooltip="Chame no Whatsapp para um pedido em específico.."></i>
+                            </a>
+
+                            <a class="btn btn-purple mt-4 mr-3" href="#cardapio">
+                                Ver cardápio
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-6 no-mobile">
+                    <div class="card-banner wow fadeIn delay-02s"></div>
+                    <div class="d-flex img-banner wow fadeIn delay-03s">
+                        <img src="./img/chef.png" alt="">
+                    </div>
+
+                    <div class="card card-case">
+                        "O restaurante mais saboroso da região! "
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="cardapio" id="cardapio">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-one text-center mb-12 wow fadeIn">
+                    <span class="hint-title"><b>Cardápio</b></span>
+                    <h1 class="title">
+                        <b>Conheça o nosso cardápio</b>
+                    </h1>
+                </div>
+
+                <div class="col-12 container-menu wow fadeInUp">
+                    <a id="menu-acai-creme" class="btn btn-white btn-sm-2 mr-3 active"
+                        onclick="cardapio.metodos.obterItensCardapio('acai-creme')">
+                        <div class="icon-creme"></div> Creme
+
+                    </a>
+                    <a id="menu-acai-vitamina" class="btn btn-white btn-sm-2 mr-3"
+                        onclick="cardapio.metodos.obterItensCardapio('acai-vitamina')">
+                        <div class="icon-vitamina"></div> Vitamina
+
+                    </a>
+
+                    <a id="menu-milk-shake" class="btn btn-white btn-sm-2 mr-3 "
+                        onclick="cardapio.metodos.obterItensCardapio('milk-shake')">
+                        <div class="icon-milkshake"></div> Milk-Shake
+
+                    </a>
+
+                </div>
+
+                <div class="col-12">
+                    <div class="row" id="itensCardapio">
+                        <!-- Aqui vão ser gerados os itens do Cardápio-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="sobre col-one wow fadeInUp delay-05s" id="sobre">
+        <div class="container">
+            <div class="row">
+                <div class="col-5 no-mobile text-center">
+                    <div class="card-sobre"></div>
+                    <div class="d-flex img-banner">
+                        <img class="img-sobre" src="./img/acai-sobre.webp" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-7">
+
+
+                    <div class="text-center">
+                        <span class="hint-title"><b>Sobre Nós</b></span>
+                        <h1 class="title">
+                            <b>Quem somos?</b>
+                        </h1>
+                    </div>
+                    <div class="mb-5">
+                        <p class="paragrafo-sobre">Somos uma acaiteria apaixonada por proporcionar a você a melhor
+                            experiência com açaí. Fundada em 2021, estamos comprometidos em oferecer produtos de alta
+                            qualidade e sabores incríveis para nossos clientes.</p>
+
+                        <p class="paragrafo-sobre">Nosso compromisso com ingredientes frescos e um ambiente acolhedor,
+                            torna a compra em Açaí D' Campos uma experiência memorável.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 col-md-3 col-sm-12 container-logo-footer wow zoomIn">
+                    <img class="logo-footer" src="./img/logo.png" alt="">
+                </div>
+
+                <div class="col-12 col-lg-6 col-md-3 col-sm-12 container-texto-footer">
+                    <p class="mb-0">
+                        <b>Cardápio Online - Açaí D' Campos</b> <br> &copy; Todos os direitos reservados <br><br>
+                        <b>Desenvolvido por:</b> Tailan Patrick Rodrigues
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-3 col-md-3 col-sm-12 container-redes-footer wow zoomIn">
+                    <a class="btn btn-sm btn-white btn-social mr-3" href="https://www.instagram.com/srbarsf/"
+                        target="_blank">
+                        <i class="fab fa-instagram social-icon" data-tooltip="Veja nosso instagram @srbarsf"></i>
+                    </a>
+                    <a class="btn btn-sm btn-white btn-social mr-3"
+                        href="https://www.google.com/maps/place/A%C3%A7a%C3%AD+D+Campos/@-19.8086065,-44.0033492,17z/data=!3m1!4b1!4m6!3m5!1s0xa68f72ac4f4109:0xe58e86716faa49e2!8m2!3d-19.8086116!4d-44.0007743!16s%2Fg%2F11t2fh7nst?entry=ttu"
+                        target="_blank">
+                        <i class="fas fab fa-map-marked-alt social-icon" data-tooltip="Onde Estamos "></i>
+                    </a>
+                    <a class="btn btn-sm btn-white btn-social botao-whatsapp" href="#" target="_blank">
+                        <i class="fab fa-whatsapp social-icon"
+                            data-tooltip="Chame no Whatsapp para um pedido em específico.."></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/modernizr-3.5.0.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+    <script type="text/javascript" src="./js/dados.js" id="dados"></script>
+    <script type="text/javascript" src="./js/app.js" id="appId"></script>
+
+    <script>new WOW().init();</script>
+
+</body>
+
+</html>
