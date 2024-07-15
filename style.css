@@ -1,10 +1,12 @@
 body {
     background-color: rgba(0, 0, 0, 0.582);
-    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.212), rgba(0, 0, 0, 0.76)), url("https://static.wixstatic.com/media/66f56f_150ba94c24094a0baafa2b425ece7140~mv2.jpg/v1/fit/w_2500,h_1330,al_c/66f56f_150ba94c24094a0baafa2b425ece7140~mv2.jpg");
+    height: 30rem;
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     font-family: sans-serif;
-    padding: 20px;
+    padding: 50px;
 }
 
 h1 {
@@ -22,6 +24,41 @@ h3 {
     font-size: 18px;
 }
 
+h4 {
+
+    text-align: right;
+    font-size: 18px;
+    margin-top: -7%;
+
+}
+
+h5 {
+
+    text-align: right;
+    font-size: 18px;
+    padding: 20px;
+    margin-top: -7%;
+
+}
+
+h6 {
+
+    text-align: right;
+    font-size: 14px;
+
+margin-right: -25px;
+
+}
+
+.price2 {
+
+    text-align: right;
+    font-size: 17px;
+    margin-right: -20px;
+    margin-bottom: -22px;
+
+}
+
 .established {
     font-style: italic;
 }
@@ -31,10 +68,10 @@ h1, h2, p {
 }
 
 .container {
-    background-color: #ffffffde;
+    background-color: #e0e0e0de;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 8px rgba(138, 75, 75, 0.61);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.788);
     border-radius: 8px;
     padding: 20px;
     max-width: 600px;
@@ -47,14 +84,17 @@ desc {
     font-size: 24px;
     border-top: 1px solid #dddddd;
     text-align: left;
+    width: 20%;
     line-height: 1.4;
     padding-top: 10px;
     margin-top: 10px;
 
 }
+ 
+
 
 .menu {
-    width: 80%;
+    width: 115%;
     background-color: rgba(246, 235, 246, 0);
     margin-left: auto;
     margin-right: auto;
@@ -92,14 +132,14 @@ h1, h2 {
 .flavor, .dessert {
     text-align: left;
     font-size: 18px;
-    width: 75%;
+    width: 85%;
 }
       
 .price {
     text-align: justify;  
     font-size: 15px;
+    border-bottom: 1px solid #e4e4e4b2;
     color: #777777;
-
     padding-top: -5px;
     margin-top: -5px;
 
